@@ -1,15 +1,18 @@
 import { createAppContainer } from 'react-navigation';
+import { myNewDrawer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-
+// import { createDrawerNavigator } from 'react-navigation-drawer';
 import MyApp from "./App"
-import Hello from "./hello"
+import Drawer from "./drawer"
+
+
 const AppNavigator = createStackNavigator(
   
   
   {
 
     Home: MyApp,
-    SayHello: Hello,
+    SayHello: Drawer,
 
  
 },
@@ -25,5 +28,6 @@ const AppNavigator = createStackNavigator(
 
 
 );
+
 
 export default createAppContainer(AppNavigator);

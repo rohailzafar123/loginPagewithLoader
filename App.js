@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Image, StatusBar, TouchableOpacity, Alert, Acti
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { TextInput, } from 'react-native-gesture-handler';
+// import 
 // import ActivityIndicatorExample from './activity.js'
 class HomeScreen extends React.Component {
   constructor(props) {
@@ -12,9 +13,6 @@ class HomeScreen extends React.Component {
       showProgress: false,
     };
   }
-
-
-
   onLogin = () => {
     const { textInputValue } = this.state;
     this.setState({
@@ -27,8 +25,9 @@ class HomeScreen extends React.Component {
         showProgress: false
       })
 
-    Alert.alert(textInputValue);
-  }, 3000)
+    // Alert.alert(textInputValue);
+    this.props.navigation.navigate('SayHello')
+  }, 2000)
 
   }
 
